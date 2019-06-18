@@ -10,7 +10,9 @@ import { Row, Col } from "react-bootstrap";
 
 class ArticlesList extends React.Component {
   imageLoad = (e, url) => {
-    if (e.target.src.indexOf("placeholder.gif") !== -1) e.target.src = url;
+    if (e.target.src.indexOf("placeholder.gif") !== -1) {
+      e.target.src = url;
+    }
   };
 
   render() {
@@ -32,7 +34,7 @@ class ArticlesList extends React.Component {
             ))}
           {!loading &&
             articles.map((article, i) => (
-              <Col key={i} xs={12} md={4}>
+              <Col key={i} xs={12} md={4} className={`${transitionCss}`}>
                 <Card
                   className={`${cardCss}`}
                   onClick={() => {
@@ -70,6 +72,19 @@ class ArticlesList extends React.Component {
     );
   }
 }
+
+const fadein = css.keyframes({
+  from: {
+    opacity: "0"
+  },
+  to: {
+    opacity: "1"
+  }
+});
+
+const transitionCss = css({
+  animation: `${fadein} 1s`
+});
 
 const cardCss = css({
   margin: "10px 0"
