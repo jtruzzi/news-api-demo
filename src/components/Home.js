@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap";
 // Components
 import ProgressLoader from "./ProgressLoader";
 import ArticlesList from "./ArticlesList";
-import CategoriesMenu from "./CategoriesMenu";
+import Categories from "./Categories";
 
 class Home extends React.Component {
   state = {
@@ -34,7 +34,7 @@ class Home extends React.Component {
       <>
         <ProgressLoader loading={loading} />
         <Container container="true">
-          <CategoriesMenu match={this.props.match} />
+          <Categories match={this.props.match} />
           <ArticlesList articles={articles} loading={loading} />
         </Container>
       </>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { css } from "glamor";
 import { categories } from "../constants";
 
-class CategoriesMenu extends React.Component {
+class Categories extends React.Component {
   render() {
     return (
       <>
@@ -51,4 +51,4 @@ const categoryCss = css({
   }
 });
 
-export default CategoriesMenu;
+export default Categories;

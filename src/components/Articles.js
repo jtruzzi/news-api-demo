@@ -7,7 +7,6 @@ import { Container } from "react-bootstrap";
 // Components
 import ProgressLoader from "./ProgressLoader";
 import ArticlesList from "./ArticlesList";
-import CategoriesMenu from "./CategoriesMenu";
 
 class Articles extends React.PureComponent {
   state = {
@@ -32,7 +31,6 @@ class Articles extends React.PureComponent {
         articles: response.articles
       });
     } catch (e) {
-      console.log(e);
       this.setState({
         loading: false
       });
@@ -49,7 +47,6 @@ class Articles extends React.PureComponent {
         <Container container="true">
           <div className={`${headingCss}`}>
             <Link to={"/"}>Back</Link>
-            {/* <CategoriesMenu match={this.props.match} /> */}
             <h1>{match.params.category}</h1>
           </div>
           <ArticlesList articles={articles} loading={loading} />
