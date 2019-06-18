@@ -1,6 +1,6 @@
 ## NEWS API Demo
 
-### To run this site you need to have nodejs installed and run these commands in the terminal.
+### To run this site you need to have nodejs installed and run these commands in your terminal.
 
 #### Clone the repository
 
