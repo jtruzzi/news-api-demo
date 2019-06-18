@@ -1,4 +1,6 @@
 export const getTopHeadlines = async () => {
+  if (process.env.REACT_APP_USE_MOCKS) return require("./mocks/articles.json");
+
   const response = await fetch(
     `${
       process.env.REACT_APP_NEWS_API_BASE_URL
@@ -11,6 +13,8 @@ export const getTopHeadlines = async () => {
 };
 
 export const getArticlesByCategory = async category => {
+  if (process.env.REACT_APP_USE_MOCKS) return require("./mocks/headlines.json");
+
   const response = await fetch(
     `${
       process.env.REACT_APP_NEWS_API_BASE_URL
