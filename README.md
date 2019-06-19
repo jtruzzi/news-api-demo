@@ -4,7 +4,7 @@
 
 #### Clone the repository
 
-    git clone
+    git clone git@github.com:jtruzzi/news-api-demo.git
 
 #### Enter the projects folder
 
